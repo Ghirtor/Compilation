@@ -1,0 +1,14 @@
+tab
+i
+arg
+
+  tab := new block(4)
+  tab[0] := 0
+  tab[1] := 1
+  tab[2] := 2
+  tab[3] := 3
+  print((tab[0] + 48))
+  print((tab[1] + 48))
+  print((tab[2] + 48))
+  print((tab[3] + 48))
+  nop

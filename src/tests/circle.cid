@@ -1,0 +1,50 @@
+// execution : ./Compilo.native -pp tests/circle.cid
+var integer i, j, cpt, acc, count;
+var boolean accc, c, acccc;
+#DEFINE toto{2} #1 > #2
+
+main {
+  if (i==1) {
+     print(46);
+     print(46);
+     ;
+  }
+  else{
+     print(46);
+     print(46)
+  };
+
+  for (cpt := 0, cpt < 2, cpt := cpt+1) {
+	print(0);
+	continue
+  };
+
+  /* \n#toto*
+  
+  */
+  c := true;
+  acccc := #toto     {3} {2};
+  i := 0;
+  /* end */
+  count := 5+---3;
+  acc := 3+i+i+3;
+  accc := c && true && acccc && false || true;
+  
+  while (c && true) {
+    print(arg);
+    c := false;
+    j := 0;
+    while (j < arg+1) {
+      if (i*i + j*j < arg*arg) {
+        print(46);
+        c := true
+      } else {
+        print(35)
+      };
+      print(32);
+      j := j+1
+    };
+    print(10);
+    i := i+1
+  }
+}

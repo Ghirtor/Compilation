@@ -1,0 +1,20 @@
+var integer acc;
+var integer j, i;
+
+integer odd(integer n) {
+	i := n+1;
+	return(i);
+}
+
+integer even(integer n) {
+	i := n-1;
+	return(i);
+}
+
+main {
+	acc := odd(8);
+	print(acc+48);
+	acc := even(acc);
+	print(acc+48);
+	//acc := printInt(even(acc));
+}

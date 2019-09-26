@@ -1,0 +1,6 @@
+var integer v;
+
+main {
+	v := printInt(2);
+	v := printInt(v);
+}

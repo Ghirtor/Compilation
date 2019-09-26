@@ -1,0 +1,115 @@
+prog_result
+h
+g
+arg
+
+  prog_result := main_integer(arg)
+
+_functions_:
+fact_integer(n):
+  local_vars : {  }
+  nop
+  goto-when(_label_1, (n < 1))
+  return((n * fact_integer((n - 1))))
+  nop
+  goto(_label_2)
+_label_1:
+  return(ret())
+  nop
+_label_2:
+foo_integer(h):
+  local_vars : {  }
+  nop
+  h := 48
+  nop
+infiniteNotTailRec_integer_integer_integer(a, b, c):
+  local_vars : {  }
+  nop
+  return((1 + infiniteNotTailRec_integer_integer_integer(a, b, c)))
+  nop
+infiniteTailRec_integer_integer_integer(a, b, c):
+  local_vars : {  }
+  nop
+  return(infiniteTailRec_integer_integer_integer(a, b, c))
+  nop
+main_integer(arg):
+  local_vars : {  }
+  h := tailRecFact_integer_integer(6, 1)
+  h := printInt_integer(h)
+  foo_integer(h)
+  h := printInt_integer(h)
+  goto-when(_label_3, (fact_integer(6) == 720))
+  print_integer(75)
+  print_integer(111)
+  nop
+  goto(_label_4)
+_label_3:
+  print_integer(79)
+  print_integer(107)
+  nop
+_label_4:
+  h := printInt_integer(tailRecFactBisBis_integer_integer_integer_integer_integer_integer_integer(6, 1, 2, 3, 4, 5, 1))
+  nop
+ret():
+  local_vars : {  }
+  nop
+  return(1)
+  nop
+retBis():
+  local_vars : {  }
+  nop
+  return(ret())
+  nop
+tailRecFactBisBisBis_integer_integer_integer_integer_integer_integer_integer(n, a, b, c, d, e, acc):
+  local_vars : {  }
+  nop
+  g := n
+  h := acc
+  goto-when(_label_5, (n < 1))
+  return((n * tailRecFactBisBisBis_integer_integer_integer_integer_integer_integer_integer((n - 1), 1, 2, 3, 4, 5, (n * acc))))
+  nop
+  goto(_label_6)
+_label_5:
+  return(1)
+  nop
+_label_6:
+tailRecFactBisBis_integer_integer_integer_integer_integer_integer_integer(n, a, b, c, d, e, acc):
+  local_vars : {  }
+  nop
+  g := n
+  n := n
+  acc := acc
+  goto-when(_label_7, (n < 1))
+  return(tailRecFactBisBis_integer_integer_integer_integer_integer_integer_integer((n - 1), 1, 2, 3, 4, 5, (n * acc)))
+  nop
+  goto(_label_8)
+_label_7:
+  return(acc)
+  nop
+_label_8:
+tailRecFactBis_integer_integer_integer(n, acc, c):
+  local_vars : {  }
+  nop
+  g := n
+  h := acc
+  goto-when(_label_9, (n < 1))
+  return(tailRecFactBis_integer_integer_integer((n - 1), (n * acc), c))
+  nop
+  goto(_label_10)
+_label_9:
+  return(acc)
+  nop
+_label_10:
+tailRecFact_integer_integer(n, acc):
+  local_vars : {  }
+  nop
+  g := n
+  h := acc
+  goto-when(_label_11, (n < 1))
+  return(tailRecFactBis_integer_integer_integer((n - 1), (n * acc), 1))
+  nop
+  goto(_label_12)
+_label_11:
+  return(acc)
+  nop
+_label_12:

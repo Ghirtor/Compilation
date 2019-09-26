@@ -1,0 +1,23 @@
+prog_result
+j
+i
+arg
+acc
+
+  prog_result := main_integer(arg)
+
+_functions_:
+even_integer(n):
+  i := (n - 1)
+  return(i)
+  nop
+main_integer(arg):
+  acc := odd_integer(8)
+  print_integer((acc + 48))
+  acc := even_integer(acc)
+  print_integer((acc + 48))
+  nop
+odd_integer(n):
+  i := (n + 1)
+  return(i)
+  nop

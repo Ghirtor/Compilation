@@ -1,0 +1,18 @@
+// execution : ./Compilo.native tests/no_init.cid
+var integer x;
+var integer n;
+
+main {
+	x := 0;
+	n := arg;
+	while (n != 1) {
+		if (n%2 == 0) {
+			print(44);
+			n := n/2;
+		} else {
+			print(39);
+			n := 3*n+1;
+		};
+		x := x+1;
+	};
+}

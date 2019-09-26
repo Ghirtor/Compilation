@@ -1,0 +1,31 @@
+prog_result
+arg
+
+  prog_result := main_integer(arg)
+
+_functions_:
+main_integer(arg):
+  local_vars : { w, x, y, z }
+  nop
+  goto(_label_1)
+_label_2:
+  nop
+  x := 1
+  goto-when(_label_4, (y > 0))
+  z := x
+  x := (x + (z * x))
+  nop
+  goto(_label_5)
+_label_4:
+  nop
+  z := (x + 1)
+  nop
+_label_5:
+  y := (x + z)
+  w := (w + 1)
+  nop
+_label_1:
+  goto-when(_label_2, (y > 0))
+_label_3:
+  print_integer(((y % 10) + 48))
+  nop

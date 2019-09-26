@@ -1,0 +1,24 @@
+x
+n
+arg
+
+  nop
+  x := 0
+  n := arg
+  goto(_label_1)
+_label_2:
+  nop
+  goto-when(_label_4, ((n % 2) == 0))
+  nop
+  print(39)
+  n := ((3 * n) + 1)
+  goto(_label_5)
+_label_4:
+  nop
+  print(44)
+  n := (n / 2)
+_label_5:
+  x := (x + 1)
+_label_1:
+  goto-when(_label_2, (n != 1))
+_label_3:

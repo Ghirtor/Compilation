@@ -1,0 +1,20 @@
+// execution : ./Compilo.native -indent tests/init1.cid
+var integer x
+var integer n
+
+main
+	x := 0
+	n := arg
+	while (n != 1)
+		if (n%2 == 0)
+		/*comment
+		
+		
+		
+		*/
+			print(44)
+			n := n/2 // comment
+		else
+			print(39)
+			n := 3*n+1
+		x := x+1

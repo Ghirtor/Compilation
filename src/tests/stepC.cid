@@ -1,0 +1,93 @@
+var integer g;
+var integer h;
+
+integer tailRecFact(integer n, integer acc) {
+	g := n;
+	h := acc;
+	if (n < 1) {
+		return(acc);
+	} else {
+		return(tailRecFactBis(n-1, n*acc, 1));
+	}
+}
+
+integer tailRecFactBis(integer n, integer acc, integer c) {
+	g := n;
+	h := acc;
+	if (n < 1) {
+		return(acc);
+	} else {
+		return(tailRecFactBis(n-1, n*acc, c));
+	}
+}
+
+integer tailRecFactBisBis(integer n, integer a, integer b, integer c, integer d, integer e, integer acc) {
+	g := n;
+	n := n;
+	acc := acc;
+	if (n < 1) {
+		return(acc);
+	} else {
+		return(tailRecFactBisBis(n-1, 1, 2, 3, 4, 5, n*acc));
+	}
+}
+
+integer tailRecFactBisBisBis(integer n, integer a, integer b, integer c, integer d, integer e, integer acc) {
+	g := n;
+	h := acc;
+	if (n < 1) {
+		return(1);
+	} else {
+		return(n*tailRecFactBisBisBis(n-1, 1, 2, 3, 4, 5, n*acc));
+	}
+}
+
+integer retBis() {
+	return(ret());
+}
+
+integer ret() {
+	return(1);
+}
+
+integer fact(integer n) {
+	if (n < 1) {
+		return(ret());
+	} else {
+		return(n * fact(n-1));
+	}
+}
+
+foo(integer h) {
+	h := 48;
+}
+
+integer infiniteNotTailRec(integer a, integer b, integer c, integer d, integer e, integer f, integer g, integer h) {
+	return(1+infiniteNotTailRec(a, b, c, d, e, f, g, h));
+}
+
+integer infiniteTailRec(integer a, integer b, integer c, integer d, integer e, integer f, integer g, integer h) {
+	return(infiniteTailRec(a, b, c, d, e, f, g, h));
+}
+
+main {
+	h := tailRecFact(6, 1);
+	h := printInt(h);
+	foo(h);
+	h:=printInt(h);
+	if (fact(6) == 720) {
+		print(79); print(107);
+	} else {
+		print(75); print(111);
+	};
+	h := printInt(tailRecFactBisBis(6, 1, 2, 3, 4, 5, 1)); // test for extension using registers a0 - a3
+	//h := printInt(tailRecFactBisBisBis(6, 1, 2, 3, 4, 5, 1)); // test for extension using registers a0 - a3
+	//h := infiniteTailRec(1, 2, 3, 4, 5, 6, 7, 8); // no stack overflow (test for extension recursive terminal calls)
+	//h := infiniteNotTailRec(1, 2, 3, 4, 5, 6, 7, 8); // stack overflow (test for extension recursive terminal calls)
+	/*h := printInt(retBis());
+	if (h == 1) {
+		print(79); print(107);
+	} else {
+		print(75); print(111);
+	};*/
+}

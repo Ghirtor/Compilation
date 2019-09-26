@@ -1,0 +1,28 @@
+integer b(integer n) {
+	print(n);
+	return(0);
+}
+
+integer a(integer n) {
+	var integer x = b(0);
+	return(0);
+}
+
+main {
+	var integer w, x, y, z;
+	while(y > 0) {
+		z := a(1);
+		x := 1;
+		if (y > 0) {
+			y := 2*w+2;
+			z := x+1;
+		}
+		else {
+			z := x;
+			x := x + z*x;
+		};
+		y := x+z;
+		w := w+1;
+	};
+	print((y%10)+48);
+}

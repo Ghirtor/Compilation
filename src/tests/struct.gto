@@ -1,0 +1,24 @@
+prog_result
+c
+arg
+
+  prog_result := main_integer(arg)
+
+_functions_:
+main_integer(arg):
+  local_vars : {  }
+  c := new block(2)
+  c[0] := true
+  c[1] := new block(2)
+  c[1][0] := 79
+  c[1][1] := 107
+  c[0] := false
+  goto(_label_1)
+_label_2:
+  nop
+_label_1:
+  goto-when(_label_2, c[0])
+_label_3:
+  print_integer(c[1][0])
+  print_integer(c[1][1])
+  nop

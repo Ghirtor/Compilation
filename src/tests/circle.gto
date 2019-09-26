@@ -1,0 +1,60 @@
+j
+i
+cpt
+count
+c
+arg
+acccc
+accc
+acc
+
+  goto-when(_label_1, (i == 1))
+  print(46)
+  print(46)
+  goto(_label_2)
+_label_1:
+  print(46)
+  print(46)
+  nop
+  nop
+_label_2:
+  cpt := 0
+  goto(_label_6)
+_label_4:
+  print(0)
+  goto(_label_3)
+_label_3:
+  cpt := (cpt + 1)
+_label_6:
+  goto-when(_label_4, (cpt < 2))
+_label_5:
+  c := true
+  acccc := true
+  i := 0
+  count := 2
+  acc := (((3 + i) + i) + 3)
+  accc := true
+  goto(_label_7)
+_label_8:
+  print(arg)
+  c := false
+  j := 0
+  goto(_label_10)
+_label_11:
+  goto-when(_label_13, (((i * i) + (j * j)) < (arg * arg)))
+  print(35)
+  goto(_label_14)
+_label_13:
+  print(46)
+  c := true
+_label_14:
+  print(32)
+  j := (j + 1)
+_label_10:
+  goto-when(_label_11, (j < (arg + 1)))
+_label_12:
+  print(10)
+  i := (i + 1)
+_label_7:
+  goto-when(_label_8, c)
+_label_9:

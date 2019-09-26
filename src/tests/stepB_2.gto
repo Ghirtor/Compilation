@@ -1,0 +1,20 @@
+j
+i
+arg
+acc
+
+  acc := odd(8)
+  print((acc + 48))
+  acc := even(acc)
+  print((acc + 48))
+  nop
+
+_functions_:
+even(n):
+  i := (n - 1)
+  return(i)
+  nop
+odd(n):
+  i := (n + 1)
+  return(i)
+  nop

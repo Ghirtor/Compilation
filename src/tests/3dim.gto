@@ -1,0 +1,36 @@
+tab
+sys_1
+sys_0
+i
+arg
+
+  tab := new block(2)
+  sys_0 := 0
+  goto(_label_8)
+_label_2:
+  tab[sys_0] := new block(3)
+  sys_1 := 0
+  goto(_label_7)
+_label_5:
+  tab[sys_0][sys_1] := new block(3)
+_label_4:
+  sys_1 := (sys_1 + 1)
+_label_7:
+  goto-when(_label_5, (sys_1 < 3))
+_label_6:
+_label_1:
+  sys_0 := (sys_0 + 1)
+_label_8:
+  goto-when(_label_2, (sys_0 < 2))
+_label_3:
+  tab[0][0][2] := 1
+  tab[1][0][2] := 2
+  tab[0][1][2] := 3
+  tab[1][1][2] := 4
+  tab[1][2][2] := 5
+  print((tab[0][0][2] + 48))
+  print((tab[1][0][2] + 48))
+  print((tab[0][1][2] + 48))
+  print((tab[1][1][2] + 48))
+  print((tab[1][2][2] + 48))
+  nop

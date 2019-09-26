@@ -1,0 +1,28 @@
+var integer h;
+
+test() {
+	var integer j = 2;
+	j := printInt(j);
+}
+
+integer tailRecFactBisBis(integer n, integer a, integer b, integer c, integer d, integer e, integer acc) {
+	var integer g, h;
+	g := n;
+	h := acc;
+	if (g < 1) {
+		return(h);
+	} else {
+		return(tailRecFactBisBis(g-1, 1, 2, 3, 4, 5, g*h));
+	}
+}
+
+main {
+	test();
+	print(79); print(107);
+	h := printInt(tailRecFactBisBis(6, 1, 2, 3, 4, 5, 1));
+	if (h == 720) {
+		print(79); print(107);
+	} else {
+		print(75); print(111);
+	};
+}

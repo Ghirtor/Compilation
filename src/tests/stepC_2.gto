@@ -1,0 +1,11 @@
+v
+prog_result
+arg
+
+  prog_result := main_integer(arg)
+
+_functions_:
+main_integer(arg):
+  v := printInt_integer(2)
+  v := printInt_integer(v)
+  nop

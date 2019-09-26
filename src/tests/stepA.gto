@@ -1,0 +1,13 @@
+x
+prog_result
+arg
+
+  prog_result := main_integer(arg)
+
+_functions_:
+main_integer(arg):
+  x := printInt_integer(3)
+  x := power_integer_integer(x, printInt_integer(4))
+  print_integer(printInt_integer(x))
+  print_integer(10)
+  nop

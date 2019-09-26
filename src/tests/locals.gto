@@ -1,0 +1,42 @@
+prog_result
+h
+arg
+
+  prog_result := main_integer(arg)
+
+_functions_:
+main_integer(arg):
+  local_vars : {  }
+  test()
+  print_integer(79)
+  print_integer(107)
+  h := printInt_integer(tailRecFactBisBis_integer_integer_integer_integer_integer_integer_integer(6, 1, 2, 3, 4, 5, 1))
+  goto-when(_label_1, (h == 720))
+  print_integer(75)
+  print_integer(111)
+  nop
+  goto(_label_2)
+_label_1:
+  print_integer(79)
+  print_integer(107)
+  nop
+_label_2:
+  nop
+tailRecFactBisBis_integer_integer_integer_integer_integer_integer_integer(n, a, b, c, d, e, acc):
+  local_vars : { g, h }
+  nop
+  g := n
+  h := acc
+  goto-when(_label_3, (g < 1))
+  return(tailRecFactBisBis_integer_integer_integer_integer_integer_integer_integer((g - 1), 1, 2, 3, 4, 5, (g * h)))
+  nop
+  goto(_label_4)
+_label_3:
+  return(h)
+  nop
+_label_4:
+test():
+  local_vars : { j }
+  j := 2
+  j := printInt_integer(j)
+  nop

@@ -1,0 +1,7 @@
+var integer[] i;
+
+main {
+  i := new integer[1];
+  i[0] := 5;
+  print(i[0]);
+}

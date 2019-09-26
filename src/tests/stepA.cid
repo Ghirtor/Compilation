@@ -1,0 +1,8 @@
+var integer x;
+
+main {
+    x := printInt(3);
+    x := power(x, printInt(4));
+    print(printInt(x));
+    print(10);
+}

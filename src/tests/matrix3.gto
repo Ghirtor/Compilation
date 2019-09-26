@@ -1,0 +1,31 @@
+prog_result
+b
+arg
+a
+
+  prog_result := main_integer(arg)
+
+_functions_:
+main_integer(arg):
+  local_vars : { sys_0 }
+  a := new block(2)
+  sys_0 := 0
+  goto(_label_4)
+_label_2:
+  a[sys_0] := new block(3)
+_label_1:
+  sys_0 := (sys_0 + 1)
+_label_4:
+  goto-when(_label_2, (sys_0 < 2))
+_label_3:
+  b := new block(1)
+  sys_0 := 0
+  goto(_label_8)
+_label_6:
+  b[sys_0] := new block(2)
+_label_5:
+  sys_0 := (sys_0 + 1)
+_label_8:
+  goto-when(_label_6, (sys_0 < 1))
+_label_7:
+  nop

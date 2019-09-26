@@ -1,0 +1,16 @@
+// decomment line you want test and comment the others
+// extension : Distinction valeurs/pointeurs -> overflow if integer must be represented with at least 32 bytes
+// range for integer of 31 bytes : -(2^(N-1)) to 2^(N-1)-1
+var integer i;
+var integer j;
+
+main {
+	//i := -1073741824; // valid
+	//i := -1073741825; // not valid
+	//i := 1073741824; // not valid
+	//i := 1073741823; // valid
+	//j := 1073741823; i := j + 1; // not valid
+	//j := 1073741822; i := j + 1; // valid
+	j := -1073741824; i := j - 1; // not valid
+	//j := -1073741823; i := j - 1; // valid
+}
